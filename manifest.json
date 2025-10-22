@@ -1,26 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Sakura",
-    "version": "1.0",
-    "description": "Turn empty whitespace on websites into aesthetic ambient zones with calming themes and gradients.",
-    "permissions": ["storage", "activeTab", "scripting"],
-    "action": {
-        "default_popup": "dist/index.html",
-        "default_title": "Sakura"
-    },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"],
-            "run_at": "document_end"
-        }
-    ],
-    "commands": {
-        "toggle-overlay": {
-            "suggested_key": {
-                "default": "Ctrl+Shift+O"
-            },
-            "description": "Toggle surfboard's overlay on the page"
-        }
+  "manifest_version": 3,
+  "name": "Sakura",
+  "version": "1.0.0",
+  "description": "A Chrome extension powered by Vite.",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
+  ],
+  "commands": {
+    "toggle-overlay": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle the overlay"
+    }
+  }
 }

@@ -1,0 +1,81 @@
+.popup-container {
+  padding: 14px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  width: 300px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.shortcut {
+  margin: 0 0 10px;
+  color: #444;
+  font-size: 12px;
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mode-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mode-card.selected {
+  border-color: #6b8fd6;
+  box-shadow: 0 0 0 2px rgba(107, 143, 214, 0.2);
+}
+
+.mode-name {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.mode-desc {
+  font-size: 12px;
+  color: #555;
+}
+
+.controls {
+  margin-top: 12px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.theme-preview {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+}
